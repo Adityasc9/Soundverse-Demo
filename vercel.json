@@ -19,11 +19,36 @@
       "dest": "soundverseBackend/index.js"
     },
     {
-      "handle": "filesystem"
+      "src": "/static/(.*)",
+      "dest": "/soundverseFrontend/static/$1"
+    },
+    {
+      "src": "/asset-manifest.json",
+      "dest": "/soundverseFrontend/asset-manifest.json"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/soundverseFrontend/favicon.ico"
+    },
+    {
+      "src": "/manifest.json",
+      "dest": "/soundverseFrontend/manifest.json"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/soundverseFrontend/robots.txt"
+    },
+    {
+      "src": "/logo192.png",
+      "dest": "/soundverseFrontend/logo192.png"
+    },
+    {
+      "src": "/logo512.png",
+      "dest": "/soundverseFrontend/logo512.png"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/soundverseFrontend/index.html"
     }
   ]
 }
