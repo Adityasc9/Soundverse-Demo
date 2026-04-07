@@ -1,0 +1,11 @@
+.bar{
+    width: 800px;
+    height: 500px;
+}
+
+@media only screen and (max-width: 400px) {
+  .bar{
+    width: 390px;
+    height: 400px;
+    }
+}

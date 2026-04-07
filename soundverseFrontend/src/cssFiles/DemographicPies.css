@@ -1,0 +1,40 @@
+.pieContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  align-items: center;
+  height: 35rem;
+}
+.proficiency {
+  height: 500px;
+  width: 400px;
+}
+.category {
+  height: 500px;
+  width: 400px;
+}
+.content {
+  height: 500px;
+  width: 400px;
+}
+@media only screen and (max-width: 400px) {
+  .pieContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  align-items: center;
+  height: 85rem;
+}
+}
+@media only screen and (max-width: 900px) {
+  .pieContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  align-items: center;
+  height: 85rem;
+}
+}

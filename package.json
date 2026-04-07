@@ -1,0 +1,13 @@
+{
+  "name": "soundverse-analytics-portfolio-demo",
+  "private": true,
+  "workspaces": [
+    "soundverseFrontend",
+    "soundverseBackend"
+  ],
+  "scripts": {
+    "dev:frontend": "npm run start --workspace soundverseFrontend",
+    "dev:backend": "npm run start --workspace soundverseBackend",
+    "build": "npm run build --workspace soundverseFrontend"
+  }
+}
