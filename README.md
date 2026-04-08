@@ -1,56 +1,26 @@
-# Soundverse Analytics Portfolio Demo
+# Soundverse Analytics Dashboard Demo
 
-This project is a self-contained portfolio rebuild of an internal Soundverse analytics dashboard. It no longer depends on company MongoDB data, internal Google Analytics access, or live `soundverse.ai` endpoints.
+This project is a public demo version of an internal analytics dashboard I built during my internship at Soundverse.ai.
 
-## What Changed
+The original dashboard depended on private company infrastructure, including Google Analytics, internal APIs, and MongoDB data. This version keeps the same dashboard flow and UI, but replaces those dependencies with generated demo data so it can be run and shared publicly.
 
-- Generated demo backend data for users, activities, prompts, audios, audio types, and engagement rows
-- Added GA-style fake active-user report data in the same `rows / dimensionValues / metricValues` shape the original app expected
-- Switched the frontend to local `/api` endpoints
-- Made Google sign-in optional, with a demo-mode fallback when no OAuth client is configured
-- Added a root Vercel config so frontend and backend can ship from one repo
+## Stack
 
-## Local Development
+- React
+- Node.js
+- Express
+- MongoDB / Mongoose
+- Google OAuth2
+- Google Analytics 4
+- Vercel
 
-Install dependencies in each app:
+## Demo Data
 
-```bash
-cd soundverseBackend && npm install
-cd ../soundverseFrontend && npm install
-```
+The backend serves realistic fake data in the same formats expected by the original code:
 
-Run the backend:
-
-```bash
-cd soundverseBackend
-npm start
-```
-
-Run the frontend in a second terminal:
-
-```bash
-cd soundverseFrontend
-npm start
-```
-
-The frontend uses a CRA proxy for `http://localhost:8080`, so `/api/*` calls will reach the local backend automatically.
-
-## Environment Variables
-
-Frontend: [soundverseFrontend/.env.example](/Users/aditya/Desktop/Soundverse/soundverseFrontend/.env.example)
-
-- `REACT_APP_GOOGLE_CLIENT_ID`:
-  Optional. If provided, the landing page offers real Google sign-in.
-- `REACT_APP_API_BASE_URL`:
-  Optional. Leave blank for same-origin or CRA proxy usage.
-
-Backend: [soundverseBackend/.env.example](/Users/aditya/Desktop/Soundverse/soundverseBackend/.env.example)
-
-- `PORT`:
-  Optional. Defaults to `8080`.
-
-## Vercel Notes
-
-This repo includes [vercel.json](/Users/aditya/Desktop/Soundverse/vercel.json) to build the React frontend and route `/api/*` requests to the Node backend.
-
-For Google sign-in to work for any Google account, the OAuth app must be configured in Google Cloud Console as an External app, with the correct Authorized JavaScript Origins and Redirect URIs for your local and Vercel domains.
+- 360 users
+- 12,000+ activity rows
+- 2,400 audio rows
+- 1,800 prompt rows
+- 4,000+ engagement rows
+- GA4-style active-user responses using `rows`, `dimensionValues`, and `metricValues`
